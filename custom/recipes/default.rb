@@ -1,4 +1,4 @@
-#include_recipe 'deploy'
+include_recipe 'deploy'
 Chef::Log.debug("fjcs start!!!!!!!!!")
 node[:deploy].each do |application, deploy|
   link "#{deploy[:deploy_to]}/current/config/.env.php" do
