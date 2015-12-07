@@ -4,5 +4,6 @@ node[:deploy].each do |application, deploy|
   end
   link "#{deploy[:deploy_to]}/current/app/storage" do
     to "#{deploy[:deploy_to]}/shared/storage"
+    link_type :symbolic
   end
 end
